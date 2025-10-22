@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang='en'><head><meta charset='utf-8'/><meta name='viewport' content='width=device-width,initial-scale=1'/>
+<title>YouTube Community Poll Idea Generator</title>
+<link rel='stylesheet' href='assets/style.css'/>
+</head><body>
+<header><h1>YouTube Community Poll Idea Generator</h1></header>
+<div class='container'><h2>YouTube Community Poll Idea Generator</h2><p>Demo page for YouTube Community Poll Idea Generator — use the input below to simulate the tool.</p>
+<label style='display:block;text-align:left;font-weight:600;margin-top:12px'>Input</label>
+<textarea id='inputText' style='width:100%;height:120px;padding:10px;border-radius:8px;border:1px solid #ddd'></textarea>
+<div style='margin-top:12px;'><button onclick='runTool()' class='tool-button'>Run</button> <a href='index.html' class='tool-button' style='background:#555'>Back</a></div>
+<div id='result' style='margin-top:12px;padding:12px;border-radius:8px;background:#fff;border:1px dashed #eee;color:#333'>Result will appear here.</div>
+</div>
+<script>function runTool(){var title="YouTube Community Poll Idea Generator".toLowerCase();var input=document.getElementById('inputText').value.trim();var out=document.getElementById('result');if(!input){out.innerText='Please enter input to simulate the tool.';return;}if(title.indexOf('title')!==-1){out.innerText='Sample Titles:\n1) '+input+' - How to\n2) '+input+' | Full Guide';}else if(title.indexOf('description')!==-1){out.innerText='Generated Description:\n'+input+'\nSubscribe for more!';}else if(title.indexOf('thumbnail')!==-1){out.innerText='Thumbnail idea: Bold text + central subject + high contrast red border.';}else if(title.indexOf('download')!==-1){out.innerHTML='Simulated download: <a href="#">Download (demo)</a>';}else if(title.indexOf('script')!==-1){out.innerText='Script (short):\nIntro: Hello! Today we will talk about '+input;}else if(title.indexOf('tag')!==-1){out.innerText='Suggested Tags: '+input.split(/\s+/).slice(0,8).map(function(w){return w.toLowerCase();}).join(', ');}else if(title.indexOf('seo')!==-1||title.indexOf('keyword')!==-1){out.innerText='SEO Suggestion: Use long-tail keywords like "'+input+' tutorial" and include in first 100 characters.';}else if(title.indexOf('analytics')!==-1||title.indexOf('tracker')!==-1||title.indexOf('estimator')!==-1){out.innerText='Sample Analytics: views=1234, avgViewDuration=2:34, ctr=5%';}else{out.innerText='Simulated output for '+title+': '+input;}};</script>
+</body></html>
